@@ -1,0 +1,265 @@
+body,
+html {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body {
+  background: rgb(2, 0, 36);
+  background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(117, 117, 213, 1) 44%, rgba(255, 171, 233, 1) 100%);
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+}
+.BoxesContainer {
+  display: grid;
+  grid-gap: 10px;
+  margin-top: 20px;
+  grid-template-columns: repeat(auto-fill, minmax(50px, 1fr));
+}
+
+.grid-button {
+  padding: 10px;
+  font-size: 14px;
+  cursor: pointer;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+}
+
+.grid-button:hover {
+  background-color: #e0e0e0;
+}
+
+.container button {
+  width: 190px;
+  height: 220px;
+  border: 5px solid transparent;
+  font-size: 30px;
+  font-weight: bold;
+  color: white;
+  background-color: #0A062B;
+  border-radius: 12px;
+  cursor: pointer;
+  z-index: 1000;
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.container button:hover {
+  transform: scale(1.1);
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.container button:active {
+  transform: scale(0.95);
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.4);
+}
+
+.option {
+  width: 200px;
+  height: 230px;
+  background-color: #0A062B;
+  position: relative;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+.option h2 {
+  z-index: 1;
+  color: #fff;
+  font-size: 1em;
+}
+
+.option::before {
+  content: '';
+  position: absolute;
+  width: 100px;
+  background-image: linear-gradient(180deg, rgb(0, 183, 255), rgb(255, 48, 255));
+  height: 130%;
+  animation: rotBGimg 3s linear infinite;
+  transition: all 0.2s linear;
+}
+
+@keyframes rotBGimg {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.option::after {
+  content: '';
+  position: absolute;
+  background: #07182E;
+  border-radius: 15px;
+  inset: 5px;
+}
+.SettingsPage {
+
+  width: 800px;
+  height: 400px;
+  border: 2px solid rgb(250, 250, 250);
+  border-radius: 12px;
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  z-index: 999;
+  overflow: hidden;
+
+  /* From https://css.glass */
+background: rgba(255, 255, 255, 0.12);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.89);
+backdrop-filter: blur(5px);
+-webkit-backdrop-filter: blur(5px);
+border: 1px solid rgba(255, 255, 255, 0.3);
+
+}
+.SettingsPage p{
+
+  color: white;
+  font-size: 26px;
+  font-family: helvetica;
+
+}
+.GameDiffculity,
+.GameMode,
+.GameMusic {
+  width: 266px;
+}
+
+.GameDiffculity {
+
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  justify-content: center;
+  align-items: center;
+  border-right: 2px dashed rgba(255, 255, 255, 0.781);
+}
+
+label {
+  width: 53%;
+  height: 20px;
+  font-size: 21px;
+  color: white;
+  display: block; /* Ensure label is block-level to stack vertically */
+  background-color: #07182E; /* Background color for the label */
+  padding: 10px; /* Padding around the text */
+  border-radius: 8px; /* Rounded corners */
+  transition: background-color 0.3s ease; /* Smooth transition for background color */
+}
+
+label:hover {
+  background-color: #1a2d4f; /* Darker shade on hover */
+}
+
+input[type="radio"] {
+  margin-right: 10px; /* Space between the radio button and label */
+  background-color: #07182E; /* Background color for the radio button */
+  border-radius: 50%; /* Make the radio button round */
+  transition: background-color 0.3s ease; /* Smooth transition for background color */
+}
+
+input[type="radio"]:checked {
+  background-color: #00b7ff; /* Color when the radio button is selected */
+  border-color: #00b7ff; /* Border color when checked */
+}
+.GameMode {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  justify-content: center;
+  align-items: center;
+  border-right: 2px dashed rgba(255, 255, 255, 0.781);
+}
+.GameMusic {
+
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  justify-content: center;
+  align-items: center;
+ 
+}
+
+
+
+@media (max-width: 768px) {
+
+.SettingsPage {
+
+  width: 270px;
+  height: 480px;
+  flex-direction: column;
+  
+}
+.SettingsPage p{
+
+  color: white;
+  font-size: 24px;
+  font-family: helvetica;
+  margin-bottom: -2px;
+
+}
+.GameDiffculity,.GameMode,.GameMusic {
+  width: 270px;
+}
+  .option h2 {
+    font-size: 10px;
+  }
+
+  .container {
+    gap: 15px;
+    flex-direction: column;
+  }
+
+  .container button {
+    width: 210px;
+    height: 110px;
+  }
+
+  .option {
+    width: 220px;
+    height: 120px;
+  }
+
+  .option::before {
+    content: '';
+    position: absolute;
+    width: 300px;
+    background-image: linear-gradient(180deg, rgb(0, 183, 255), rgb(255, 48, 255));
+    height: 60%;
+    animation: rotBGimg 3s linear infinite;
+    transition: all 0.2s linear;
+  }
+
+  @keyframes rotBGimg {
+    from {
+      transform: rotate(0deg);
+    }
+
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  .option::after {
+    content: '';
+    position: absolute;
+    background: #07182E;
+    border-radius: 15px;
+    inset: 5px;
+  }
+}

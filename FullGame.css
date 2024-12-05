@@ -1,0 +1,151 @@
+body,
+html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    background: rgb(2, 0, 36);
+    background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(117, 117, 213, 1) 44%, rgba(255, 171, 233, 1) 100%);
+}
+
+.InfoConatinerData {
+    display: flex;
+    justify-content: center;
+    font-family: Helvetica, sans-serif;
+    font-size: 30px;
+    text-align: center;
+    color: #261152;
+    width: 100%;
+    height: 20%;
+    font-weight: bold;
+
+}
+
+.InfoConatinerData button {
+    font-family: Helvetica, sans-serif;
+    font-weight: bold;
+    width: 130px;
+    height: 30px;
+    border-radius: 8px;
+    margin-top: 5px;
+    cursor: pointer;
+    background-color: #261152;
+    color: #C5ADFF;
+    border: 1px solid #C5ADFF;
+    ;
+}
+
+.FullConatiner {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+
+
+}
+
+.GameContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 80%;
+
+}
+
+.buttons,
+.buttons2,
+.buttons3 {
+    border: none;
+    border-radius: 5px;
+    color: black;
+    font-size: 3vw;
+    background-color: #D4C2FF
+}
+
+.buttons:hover,
+.buttons2:hover,
+.buttons3:hover {
+
+
+    background-color: #C5ADFF;
+}
+
+.EasyMode {
+
+    width: 35%;
+    height: 80%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 3px;
+    box-shadow: 0px 0px 40px -15px rgba(0, 0, 0, 0.76);
+
+
+}
+
+.MediumMode {
+    width: 36%;
+    height: 90%;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 3px;
+}
+
+.HardMode {
+    box-shadow: 0px 0px 40px -15px rgba(0, 0, 0, 0.76);
+    width: 38%;
+    height: 92%;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    gap: 3px;
+}
+
+.MediumMode,
+.EasyMode {
+
+
+    display: none;
+}
+
+@media (max-width: 800px) {
+
+
+    .FullConatiner {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 70%;
+
+
+    }
+
+    .InfoConatinerData{
+
+        margin-top: 40px;
+
+    }
+
+    .EasyMode,
+    .MediumMode,
+    .HardMode {
+
+        width: 90%;
+        height: 90%;
+
+    }
+    .buttons,
+    .buttons2,
+    .buttons3 {
+     
+        font-size: 24px;
+       
+    }
+    
+
+}
